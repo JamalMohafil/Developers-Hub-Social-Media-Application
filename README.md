@@ -76,12 +76,7 @@ Watch the demo on YouTube: [Watch the demo on YouTube](https://www.youtube.com/w
 This project was an exciting learning journey for me, and through it, I explored powerful tools like **Redis** and **BullMQ** for building large-scale applications. During development, I faced numerous challenges, but overcoming them helped me understand the best practices for building scalable and maintainable projects. **Next.js** allowed me to create a fast and efficient frontend for the platform, and I'm excited about the future development of Developers Hub.
 
 ---
-
-## 🔖 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
+ 
 
 # 🧑‍💻 Developers Hub - منصة تواصل اجتماعي للمطورين
 
@@ -160,9 +155,4 @@ apps/
 
 المشروع كان رحلة تعلم كتير مثيرة إلي، ومن خلاله اكتشفت أدوات قوية مثل **Redis** و**BullMQ** لبناء تطبيقات ضخمة. خلال مرحلة التطوير، واجهت كتير تحديات، بس التغلب عليهن ساعدني فهم أفضل الطرق لبناء مشاريع قابلة للتوسع والصيانة. استخدمت **Next.js** لعمل واجهة أمامية سريعة وفعالة للمنصة، وأنا متحمس لتطوير **Developers Hub** أكتر بالمستقبل.
 
----
-
-## 🔖 الترخيص
-
-هذا المشروع مرخص بموجب **MIT License** - راجع ملف [LICENSE](LICENSE) لمزيد من التفاصيل.
-
+  
