@@ -1,124 +1,128 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+👨‍💻 Developers Hub - Social Media Platform for Developers
+Developers Hub is a social media platform designed specifically for developers, where they can connect, share projects, and engage with each other. The platform is built using Next.js for the frontend and Nest.js for the backend, providing a scalable and maintainable architecture.
 
-## Getting Started
+Website Preview
 
-First, run the development server:
+🛠️ Technologies Used
+Backend:
+Nest.js with Modular Monolithic Architecture
+Redis Pub/Sub for real-time notifications
+Redis for caching to improve performance
+BullMQ for background tasks like email notifications
+PostgreSQL as the main database
+Prisma ORM for database management
+Socket.io for real-time communication
+Frontend:
+Next.js 15 for fast and SEO-friendly pages with Server-Side Rendering (SSR)
+TailwindCSS for styling
+Shadcn UI for modern UI components
+🚀 How to Run the Project Locally
+✅ Prerequisites
+Docker and Docker Compose installed
+Redis running locally on port 6887:
+docker run -p 6887:6379 redis
+A PostgreSQL or MySQL database (local or via Docker)
+Your SMTP credentials: EMAIL and PASSWORD (e.g., Gmail or Mailtrap)
+.env files configured with:
+DATABASE_URL
+REDIS_URL
+SMTP_EMAIL, SMTP_PASSWORD, etc.
+🗂️ Project Structure
+The code is organized into the apps folder:
 
-```bash
+apps/
+├── api   # Nest.js backend
+└── web   # Next.js frontend
+📦 Installation Steps
+Clone the repository:
+git clone https://github.com/JamalMohafil/Developers_Hub-Social-Media-Application.git
+cd Developers_Hub-Social-Media-Application
+Install dependencies:
+Backend:
+cd apps/api
+npm install
+Frontend:
+cd ../web
+npm install
+Create your .env files in both apps/api and apps/web, and add the necessary environment variables.
+▶️ Run the Project
+Backend (API):
+npm run start:dev
+Frontend (Web):
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🌍 Live Preview
+Watch the demo on YouTube: Watch the demo on YouTube
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📱 Connect with Me
+LinkedIn
+Instagram
+YouTube
+⚡ About the Project
+This project was an exciting learning journey for me, and through it, I explored powerful tools like Redis and BullMQ for building large-scale applications. During development, I faced numerous challenges, but overcoming them helped me understand the best practices for building scalable and maintainable projects. Next.js allowed me to create a fast and efficient frontend for the platform, and I'm excited about the future development of Developers Hub.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔖 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+🧑‍💻 Developers Hub - منصة تواصل اجتماعي للمطورين
+Developers Hub هي منصة تواصل اجتماعي مخصصة للمطورين، فيهن يتواصلوا مع بعض، يشاركوا مشاريعهم، ويتفاعلوا مع بعض. المنصة مبنية باستخدام Next.js للواجهة الأمامية وNest.js للخلفية، وهاد الشي بيوفر هيكلية قابلة للتوسع والصيانة بسهولة.
 
-## Learn More
+صورة الموقع
 
-To learn more about Next.js, take a look at the following resources:
+🛠️ التقنيات المستخدمة
+Backend:
+Nest.js مع Modular Monolithic Architecture
+Redis Pub/Sub للإشعارات الفورية
+Redis للتخزين المؤقت (Caching) لتحسين الأداء
+BullMQ لمعالجة المهام الخلفية مثل إرسال الإيميلات
+PostgreSQL كقاعدة بيانات رئيسية
+Prisma ORM لإدارة قاعدة البيانات
+Socket.io للتواصل في الوقت الفعلي
+Frontend:
+Next.js 15 لإنشاء صفحات سريعة ومتوافقة مع محركات البحث (SEO) مع دعم الـ SSR
+TailwindCSS للتصميم
+Shadcn UI لتقديم مكونات واجهة مستخدم حديثة
+🚀 كيفية تشغيل المشروع محليًا
+✅ المتطلبات الأساسية
+وجود Docker و Docker Compose مثبتين
+تشغيل Redis محليًا على المنفذ 6887:
+docker run -p 6887:6379 redis
+قاعدة بيانات PostgreSQL أو MySQL (محلية أو من خلال Docker)
+بيانات اعتماد SMTP الخاصة بك: EMAIL و PASSWORD
+إعداد ملف .env يحتوي على:
+DATABASE_URL
+REDIS_URL
+SMTP_EMAIL, SMTP_PASSWORD, وغيرها
+🗂️ هيكلية المشروع
+apps/
+├── api   # الواجهة الخلفية (Nest.js)
+└── web   # الواجهة الأمامية (Next.js)
+📦 خطوات التثبيت
+استنساخ المستودع:
+git clone https://github.com/JamalMohafil/Developers_Hub-Social-Media-Application.git
+cd Developers_Hub-Social-Media-Application
+تثبيت الحزم:
+الخلفية (Backend):
+cd apps/api
+npm install
+الواجهة الأمامية (Frontend):
+cd ../web
+npm install
+أنشئ ملفات .env داخل apps/api و apps/web وأضف متغيرات البيئة المطلوبة كما ذُكر أعلاه.
+▶️ تشغيل المشروع
+الخلفية (API):
+npm run start:dev
+الواجهة الأمامية (Web):
+npm run dev
+🌍 معاينة حية
+فيك تشوف العرض التوضيحي للمشروع على يوتيوب:
+شاهد العرض التوضيحي على يوتيوب
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📱 تواصل معي
+لينكد إن
+إنستغرام
+يوتيوب
+⚡ عن المشروع
+المشروع كان رحلة تعلم كتير مثيرة إلي، ومن خلاله اكتشفت أدوات قوية مثل Redis وBullMQ لبناء تطبيقات ضخمة. خلال مرحلة التطوير، واجهت كتير تحديات، بس التغلب عليهن ساعدني فهم أفضل الطرق لبناء مشاريع قابلة للتوسع والصيانة. استخدمت Next.js لعمل واجهة أمامية سريعة وفعالة للمنصة، وأنا متحمس لتطوير Developers Hub أكتر بالمستقبل.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# to-up
-=======
-# Turborepo starter
-
-This Turborepo starter is maintained by the Turborepo core team.
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
->>>>>>> 356fde7 (Initial commit)
+🔖 الترخيص
+هذا المشروع مرخص بموجب MIT License - راجع ملف LICENSE لمزيد من التفاصيل.
