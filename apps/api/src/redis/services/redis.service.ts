@@ -30,11 +30,11 @@ export class RedisService implements OnModuleInit, OnModuleDestroy {
     this.publisher = new Redis.Redis(redisConfig);
     this.subscriber = new Redis.Redis(redisConfig);
   }
-  // عند تدمير الوحدة
+  
   onModuleDestroy() {
-    this.redisClient.quit(); // إغلاق الاتصال عند تدمير الوحدة
-    this.publisher.quit(); // إغلاق الاتصال عند تدمير الوحدة
-    this.subscriber.quit(); // إغلاق الاتصال عند تدمير الوحدة
+    this.redisClient.quit();  
+    this.publisher.quit();  
+    this.subscriber.quit(); 
   }
 
   async publish(channel: string, message: string): Promise<number> {
