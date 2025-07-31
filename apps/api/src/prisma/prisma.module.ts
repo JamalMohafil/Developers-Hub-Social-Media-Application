@@ -3,7 +3,7 @@ import { PrismaService } from './prisma.service';
 import { ConfigModule } from '@nestjs/config';
 import prismaConfig from './prisma.config';
 
-@Global()
+@Global() 
 @Module({
   imports: [ConfigModule.forFeature(prismaConfig)],
   providers: [PrismaService],
