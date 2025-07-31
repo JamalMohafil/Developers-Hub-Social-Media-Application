@@ -28,25 +28,16 @@ export class TokenService {
     @Inject(refreshConfig.KEY)
     private refreshTokenConfig: ConfigType<typeof refreshConfig>,
   ) {}
-  // async updateHashedRefreshToken(userId: string, hashedRT: string | null) {
-  //   return await this.prisma.user.update({
-  //     where: {
-  //       id: userId,
-  //     },
-  //     data: {
-  //       hashedRefreshToken: hashedRT,
-  //     },
-  //   });
-  // }
+  
+ 
   async generateTokens(userId: string) {
     const payload: AuthJwtPayload = { sub: userId };
     const [accessToken] = await Promise.all([
       this.jwtService.signAsync(payload),
-      // this.jwtService.signAsync(payload, this.refreshTokenConfig),
-    ]);
+     ]);
     return {
       accessToken,
-      // refreshToken,
+     
     };
   }
 
@@ -93,17 +84,7 @@ export class TokenService {
     return { id: user.id, role: user.role };
   }
 
-  // async refreshToken(userId: string, username: string) {
-  //   const { accessToken, refreshToken } = await this.generateTokens(userId);
-  //   return {
-  //     user: {
-  //       id: userId,
-  //       username,
-  //     },
-  //     accessToken,
-  //     refreshToken,
-  //   };
-  // }
+ 
 
   async generateResetToken(userId: string) {
     const token = this.jwtService.sign({ userId }, { expiresIn: '15m' });
@@ -114,7 +95,7 @@ export class TokenService {
       // تحقق من التوكن
       const decoded = this.jwtService.verify(resetToken);
 
-      const expirationTime = decoded.exp * 1000; // تحويل إلى ms
+      const expirationTime = decoded.exp * 1000; 
       const currentTime = Date.now();
 
       if (expirationTime > currentTime) {
@@ -127,13 +108,11 @@ export class TokenService {
         );
       }
 
-      // إذا انتهى التوكن، نكمل عادي بدون خطأ
-    } catch (error) {
+     } catch (error) {
       if (error instanceof HttpException) {
         throw error;
       }
 
-      // إذا كان JWT نفسه منتهي أو غير صالح، نكمل أيضًا لإنشاء توكن جديد
-    }
+     }
   }
 }
