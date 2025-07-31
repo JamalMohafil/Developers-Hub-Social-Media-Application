@@ -55,43 +55,7 @@ apps/
 
 ---
 
-## 📦 Installation Steps
-
-### Clone the repository:
-```bash
-git clone https://github.com/JamalMohafil/Developers_Hub-Social-Media-Application.git
-cd Developers_Hub-Social-Media-Application
-```
-
-### Install dependencies:
-#### Backend:
-```bash
-cd apps/api
-npm install
-```
-#### Frontend:
-```bash
-cd ../web
-npm install
-```
-
-### Create your `.env` files in both `apps/api` and `apps/web`, and add the necessary environment variables.
-
----
-
-## ▶️ Run the Project
-
-### Backend (API):
-```bash
-npm run start:dev
-```
-
-### Frontend (Web):
-```bash
-npm run dev
-```
-
----
+ 
 
 ## 🌍 Live Preview
 
@@ -173,41 +137,7 @@ apps/
 
 ---
 
-## 📦 خطوات التثبيت
-
-### استنساخ المستودع:
-```bash
-git clone https://github.com/JamalMohafil/Developers_Hub-Social-Media-Application.git
-cd Developers_Hub-Social-Media-Application
-```
-
-### تثبيت الحزم:
-#### الخلفية (Backend):
-```bash
-cd apps/api
-npm install
-```
-#### الواجهة الأمامية (Frontend):
-```bash
-cd ../web
-npm install
-```
-
-### أنشئ ملفات `.env` داخل `apps/api` و `apps/web` وأضف متغيرات البيئة المطلوبة كما ذُكر أعلاه.
-
----
-
-## ▶️ تشغيل المشروع
-
-### الخلفية (API):
-```bash
-npm run start:dev
-```
-
-### الواجهة الأمامية (Web):
-```bash
-npm run dev
-```
+ 
 
 ---
 
