@@ -33,25 +33,22 @@ export class PasswordService {
     const user = await this.userRepository.findByEmail(email);
     if (!user) throw new NotFoundException('User Not Found');
 
-    // التحقق مما إذا كان لدى المستخدم `resetToken` موجود مسبقًا
+ 
     user.resetToken &&
       (await this.tokenService.checkResetPasswordToken(user.resetToken));
 
-    // إنشاء رمز إعادة تعيين جديد
-    const token = await this.tokenService.generateResetToken(user.id);
+     const token = await this.tokenService.generateResetToken(user.id);
 
-    // تحديث المستخدم بالتوكن الجديد
-
+ 
     await this.userAuthService.updateResetToken(user.id, token);
-    // إنشاء رابط إعادة تعيين كلمة المرور
-    const resetLink = `${this.mainConfiguration.FRONTEND_URL}/reset-password/token?token=${token}`;
+     const resetLink = `${this.mainConfiguration.FRONTEND_URL}/reset-password/token?token=${token}`;
 
-    // إرسال البريد الإلكتروني
+ 
     try {
       await this.emailService.sendResetPasswordEmail(user.email, resetLink);
 
       return {
-        statusCode: HttpStatus.OK, // أو HttpStatus.ACCEPTED إذا كنت تفضل ذلك
+        statusCode: HttpStatus.OK, 
         message: 'Check your email to reset your password',
       };
     } catch (error) {
@@ -65,7 +62,7 @@ export class PasswordService {
         );
       }
 
-      // احذف التوكن إذا فشل إرسال البريد
+ 
       await this.userAuthService.updateResetToken(user.id, null);
 
       throw new HttpException(
@@ -75,7 +72,7 @@ export class PasswordService {
     }
   }
   async resetPassword(token: string, newPassword: string) {
-    // try {
+ 
     const { userId } = await this.jwtService.verify(token);
     const user = await this.userRepository.findUserById(userId);
 
